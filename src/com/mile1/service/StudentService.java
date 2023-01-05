@@ -29,7 +29,7 @@ public class StudentService {
 		int c = 0;
 		if(s != null) {
 			for(Student i : s) {
-				if(i != null && i == null ) {
+				if(i == null ) {
 					c++;
 				}
 			}

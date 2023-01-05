@@ -11,16 +11,18 @@ public class StudentMain {
 			data[i] = new Student(); // have to initialze
 		} */
 		data[0] = new Student("Shekar",new int[] {85,75,95});
-		data[1] = new Student(null, new int[] {85,75,95});
-		data[2] = null;
-		data[3] = new Student("Manoj",null);
+		data[1] = new Student("Ajay", new int[] {25,75,95});
+		data[2] = new Student("Kamlesh", new int[] {48,91,87});
+		data[3] = new Student("Manoj",new int[] {52,67,90});
 	}
 	
 	public static void main(String[] arg) {
+		new StudentMain();
 		for(Student i : data) {
 			try {
 				if(reporter.validate(i).contentEquals("VALID")) {
 					i.setGrade(reporter.findGrades(i));
+					System.out.println("Grade of "+i.getName()+" is "+i.getGrade());
 				}
 			}
 			catch(NullMarksArrayException nmae) {
